@@ -1,0 +1,9 @@
+asgiref==3.11.1
+Django==6.0.2
+django-cors-headers==4.9.0
+djangorestframework==3.16.1
+pillow==12.1.1
+sqlparse==0.5.5
+git remote add origin https://github.com/girrajbarua7880/Latest_Portfolio.git
+git branch -M main
+git push -u origin main
