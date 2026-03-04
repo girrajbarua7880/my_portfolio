@@ -13,10 +13,14 @@ const About = () => {
 
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold">
-            About <span className="text-cyan-400">Me</span>
+          <h2 className="text-5xl font-bold tracking-wide">
+            About{" "}
+            <span className="relative inline-block text-cyan-400 pb-3">
+              Me
+              <span className="absolute left-0 bottom-0 w-full h-1.5 bg-cyan-400 rounded-full"></span>
+            </span>
           </h2>
-          <div className="w-20 h-1 bg-cyan-400 mx-auto mt-4 rounded-full"></div>
+         
         </div>
 
         {/* Content Grid */}

@@ -18,10 +18,13 @@ const Home = () => {
 
         {/* Name */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 animate-slideUp">
-          <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]">
-            Girraj Barua
-          </span>
-        </h1>
+          <span className="text-white">
+           Girraj
+            </span>{" "}
+                 <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.6)]">
+                 Barua
+              </span>
+          </h1>
 
         {/* Role */}
         <h2 className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 font-medium">
