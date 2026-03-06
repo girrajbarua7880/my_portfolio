@@ -18,15 +18,18 @@ from django.contrib import admin
 from django.urls import path ,include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.http import HttpResponse
+from django.http import 
+from django.http import JsonResponse
 
 
 def home(request):
-    return HttpResponse("Backend Running Successfully ✅")
+    return JsonResponse({"message": "Backend is running"})
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', home), 
+    path('admin/', admin.site.urls),
     path('project/', include('projects.urls')),
     path('method/', include('skills.urls')),
     path('credential/', include('credential.urls')),
