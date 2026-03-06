@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import API_URL from "../../api";
 
 const Certificates = () => {
   const [certificates, setCertificates] = useState([]);
@@ -8,14 +9,14 @@ const Certificates = () => {
   const getImageUrl = (path) => {
     if (!path) return "";
     if (path.startsWith("http")) return path;
-    return `http://127.0.0.1:8000${path}`;
+    return `${API_URL}${path}`;
   };
 
   useEffect(() => {
     const fetchCertificates = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/credential/certificates/"
+          `${API_URL}/credential/certificates/`
         );
         const data = await response.json();
         setCertificates(data);

@@ -1,12 +1,14 @@
 
 
 import { useEffect, useState } from "react";
+import API_URL from "../../api";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/method/skills/")
+    fetch(
+      `${API_URL}/method/skills/`)
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();

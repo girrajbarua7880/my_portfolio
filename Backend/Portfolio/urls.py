@@ -31,16 +31,7 @@ urlpatterns = [
     path('method/', include('skills.urls')),
     path('credential/', include('credential.urls')),
     path('contact/', include('connect_us.urls')),
-    
-
-
-
-
-
-
-
-
-    
+        
 ]
 
 

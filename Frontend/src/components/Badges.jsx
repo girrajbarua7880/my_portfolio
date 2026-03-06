@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import API_URL from "../../api";
 
 const BadgeSection = () => {
   const [badges, setBadges] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/credential/badges/")
+    fetch(`${API_URL}/credential/badges/`)
       .then((response) => response.json())
       .then((data) => setBadges(data))
       .catch((error) => console.error("Error fetching badges:", error));
