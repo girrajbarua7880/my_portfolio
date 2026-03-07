@@ -22,7 +22,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-      `${API_URL}contact/connect/`, {
+      `${API_URL}/contact/connect/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
