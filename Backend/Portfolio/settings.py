@@ -48,7 +48,7 @@ if not DEBUG:
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com"
+    os.getenv("FRONTEND_URL"),
 ]
 
 
@@ -155,7 +155,7 @@ STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
     os.getenv("FRONTEND_URL"),
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
 
 
