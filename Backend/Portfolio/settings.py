@@ -47,8 +47,14 @@ if not DEBUG:
 
 
 
+CORS_ALLOWED_ORIGINS = [
+    os.getenv("FRONTEND_URL_RENDER"),
+    os.getenv("FRONTEND_URL_NETLIFY"),
+]
+
 CSRF_TRUSTED_ORIGINS = [
-    os.getenv("FRONTEND_URL"),
+    os.getenv("FRONTEND_URL_RENDER"),
+    os.getenv("FRONTEND_URL_NETLIFY"),
 ]
 
 
@@ -152,10 +158,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-CORS_ALLOWED_ORIGINS = [
-    os.getenv("FRONTEND_URL"),
-]
-# CORS_ALLOW_ALL_ORIGINS = True
+
 
 
 
