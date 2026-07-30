@@ -61,20 +61,20 @@ class ContactMessageView(APIView):
             message = contact.message
 
             # 2️⃣ Send email to admin
-            send_mail(
-                "New Contact Message",
-                f"Name: {name}\nEmail: {email}\nMessage: {message}",
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER],
-            )
+            # send_mail(
+            #     "New Contact Message",
+            #     f"Name: {name}\nEmail: {email}\nMessage: {message}",
+            #     settings.EMAIL_HOST_USER,
+            #     [settings.EMAIL_HOST_USER],
+            # )
 
-            # 3️⃣ Send greeting email to user
-            send_mail(
-                "Thank you for contacting me",
-                f"Hi {name},\n\nThank you for reaching out. I have received your message and will get back to you soon.\n\nBest regards,\nGirraj Barua",
-                settings.EMAIL_HOST_USER,
-                [email],
-            )
+            # # 3️⃣ Send greeting email to user
+            # send_mail(
+            #     "Thank you for contacting me",
+            #     f"Hi {name},\n\nThank you for reaching out. I have received your message and will get back to you soon.\n\nBest regards,\nGirraj Barua",
+            #     settings.EMAIL_HOST_USER,
+            #     [email],
+            # )
 
             # 4️⃣ Return success message to React
             return Response({
