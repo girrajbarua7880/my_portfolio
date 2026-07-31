@@ -18,8 +18,6 @@ db.sqlite3
 # Logs
 *.log
 
-# Media files (user uploads)
-media/
 
 # Static collected files
 staticfiles/
