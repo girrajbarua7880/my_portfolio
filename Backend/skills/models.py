@@ -9,7 +9,8 @@ class Skill(models.Model):
     )
 
     skill_name = models.CharField(max_length=100)
-    logo = models.ImageField(null=False,)
+    # logo = models.ImageField(null=False,)
+    logo = models.ImageField(upload_to="skills/", null=False, blank=False)
     description = models.TextField()
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default="frontend")
     setup_date = models.DateTimeField(auto_now_add=True)
